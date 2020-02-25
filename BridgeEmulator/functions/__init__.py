@@ -6,8 +6,26 @@ def nextFreeId(bridge_config, element):
 
 # Define light defininitions for discovery features and adding device data to config
 light_types = {}
-light_types["Tasmota"] = {"type": "Extended color light", "swversion": "1.46.13_r26312"}
-light_types["Tasmota"]["state"] = {"on": False, "bri": 200, "hue": 0, "sat": 0, "xy": [0.0, 0.0], "alert": "none", "effect": "none", "colormode": "xy", "reachable": True}
+
+light_types["Tasmota-1Channel"] = {"type": "Dimmable light", "swversion": "1.46.13_r26312", "manufacturername": "Tasmota"}
+light_types["Tasmota-1Channel"]["state"] = {"on": False, "bri": 254, "alert": "none", "reachable": True}
+light_types["Tasmota-1Channel"]["config"] = {"archetype": "classicbulb", "function": "mixed", "direction": "omnidirectional"}
+
+light_types["Tasmota-2Channel"] = {"type": "Color temperature light", "swversion": "1.46.13_r26312", "manufacturername": "Tasmota"}
+light_types["Tasmota-2Channel"]["state"] = {"on": False, "bri": 254, "ct": 461, "alert": "none", "effect": "none", "colormode": "ct", "reachable": True}
+light_types["Tasmota-2Channel"]["config"] = {"archetype": "sultanbulb", "function": "mixed", "direction": "omnidirectional"}
+
+light_types["Tasmota-3Channel"] = {"type": "Extended color light", "swversion": "1.46.13_r26312", "manufacturername": "Tasmota"}
+light_types["Tasmota-3Channel"]["state"] = {"on": False, "bri": 254, "hue": 0, "sat": 0, "xy": [0.0, 0.0], "alert": "none", "effect": "none", "colormode": "xy", "reachable": True}
+light_types["Tasmota-3Channel"]["config"] = {"archetype": "sultanbulb", "function": "mixed", "direction": "omnidirectional"}
+
+light_types["Tasmota-4Channel"] = {"type": "Extended color light", "swversion": "1.46.13_r26312", "manufacturername": "Tasmota"}
+light_types["Tasmota-4Channel"]["state"] = {"on": False, "bri": 254, "hue": 0, "sat": 0, "xy": [0.0, 0.0], "alert": "none", "effect": "none", "colormode": "xy", "reachable": True}
+light_types["Tasmota-4Channel"]["config"] = {"archetype": "sultanbulb", "function": "mixed", "direction": "omnidirectional"}
+
+light_types["Tasmota-5Channel"] = {"type": "Extended color light", "swversion": "1.46.13_r26312", "manufacturername": "Tasmota"}
+light_types["Tasmota-5Channel"]["state"] = {"on": False, "bri": 254, "hue": 0, "sat": 0, "xy": [0.0, 0.0], "ct": 461, "alert": "none", "effect": "none", "colormode": "xy", "reachable": True}
+light_types["Tasmota-5Channel"]["config"] = {"archetype": "sultanbulb", "function": "mixed", "direction": "omnidirectional"}
 
 light_types["ESPHome-RGB"] = {"type": "Extended color light", "swversion": "1.46.13_r26312", "manufacturername": "ESPHome"}
 light_types["ESPHome-RGB"]["state"] = {"on": False, "bri": 254, "hue": 0, "sat": 0, "xy": [0.0, 0.0], "alert": "none", "effect": "none", "colormode": "xy", "reachable": True}
