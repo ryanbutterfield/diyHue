@@ -99,10 +99,6 @@ if args.docker or (os.getenv('DOCKER') and os.getenv('DOCKER') == "true"):
     docker = True
     dockerSetup(dockerMAC)
     print("Docker Setup Complete")
-elif os.getenv('MAC'):
-    dockerMAC = os.getenv('MAC')
-    mac = str(dockerMAC).replace(":","")
-    print("Host MAC given as " + mac)
 else:
     docker = False
 
