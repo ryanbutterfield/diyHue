@@ -114,6 +114,6 @@ def get_light_state(address, light):
         state["ct"] = ct
         state["colormode"] = "ct"
     
-    state["bri"] = (int(light_data["Dimmer"]) / 100.0) * 254.0
+    state["bri"] = int((int(light_data["Dimmer"]) / 100.0) * 254.0)
         
     return state
